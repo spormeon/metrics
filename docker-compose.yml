@@ -1,7 +1,7 @@
 services:
   # Grafana instance configured with VictoriaLogs as datasource
   grafana:
-    image: grafana/grafana:11.5.0
+    image: adysis/victoriametricslogs:v1.0.1  # Use your custom image with version v1.0.1
     depends_on:
       - "victoriametrics"
       - "victorialogs"
