@@ -1,7 +1,7 @@
 services:
   # Grafana instance configured with VictoriaLogs as datasource
   grafana:
-    image: adysis/victoriametricslogs:v1.0.1  # Use your custom image with version v1.0.1
+    image: adysis/victoriametricslogs:v1.0.2  # Use your custom image with version v1.0.1
     depends_on:
       - "victoriametrics"
       - "victorialogs"
@@ -17,6 +17,8 @@ services:
     environment:
       - "GF_INSTALL_PLUGINS=victoriametrics-logs-datasource"
     restart: always
+    networks:
+      - metrics_network
 
   # vector is logs collector. It collects logs according to vector.yml
   # and forwards them to VictoriaLogs
@@ -34,6 +36,8 @@ services:
     ports:
       - "8686:8686"
     user: root
+    networks:
+      - metrics_network
 
   #  VictoriaLogs instance, a single process responsible for
   #  storing logs and serving read queries.
@@ -43,6 +47,8 @@ services:
       - "--storageDataPath=/vlogs"
     volumes:
       - vldata:/vlogs
+    networks:
+      - metrics_network
 
   # VictoriaMetrics instance, a single process responsible for
   # scraping, storing metrics and serve read requests.
@@ -54,7 +60,11 @@ services:
     command:
       - "--storageDataPath=/storage"
       - "--promscrape.config=/etc/prometheus/prometheus.yml"
+    ports:
+      - 8428:8428
     restart: always
+    networks:
+      - metrics_network
 
   # vmauth is a router and balancer for HTTP requests.
   # It proxies query requests from vmalert to either VictoriaMetrics or VictoriaLogs,
@@ -71,6 +81,8 @@ services:
     ports:
       - 8427:8427
     restart: always
+    networks:
+      - metrics_network
 
   # vmalert executes alerting and recording rules according to the given rule type.
   vmalert:
@@ -97,6 +109,8 @@ services:
       # display source of alerts in grafana
       - "--external.url=http://0.0.0.0:3000" #grafana outside container
     restart: always
+    networks:
+      - metrics_network
 
   # alertmanager receives alerting notifications from vmalert
   # and distributes them according to --config.file.
@@ -109,8 +123,14 @@ services:
     ports:
       - 9093:9093
     restart: always
+    networks:
+      - metrics_network
 
 volumes:
   vmdata: {}
   vldata: {}
   grafanadata: {}
+
+networks:
+  metrics_network:
+    driver: bridge
