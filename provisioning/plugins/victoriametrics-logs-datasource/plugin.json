@@ -1,0 +1,74 @@
+{
+    "type": "datasource",
+    "name": "VictoriaLogs",
+    "id": "victoriametrics-logs-datasource",
+    "category": "logging",
+    "logs": true,
+    "metrics": true,
+    "alerting": true,
+    "annotations": true,
+    "streaming": true,
+    "backend": true,
+    "executable": "victoriametrics_logs_backend_plugin",
+    "queryOptions": {
+        "maxDataPoints": true
+    },
+    "info": {
+        "description": "VictoriaLogs datasource plugin for Grafana",
+        "author": {
+            "name": "VictoriaMetrics",
+            "url": "https://victoriametrics.com/"
+        },
+        "keywords": [
+            "logs",
+            "log analytics",
+            "observability",
+            "victoriametrics",
+            "victorialogs",
+            "datasource"
+        ],
+        "logos": {
+            "small": "img/logo.svg",
+            "large": "img/logo.svg"
+        },
+        "links": [
+            {
+                "name": "Learn more",
+                "url": "https://docs.victoriametrics.com/victorialogs/"
+            },
+            {
+                "name": "LogsQL",
+                "url": "https://docs.victoriametrics.com/victorialogs/logsql/"
+            },
+            {
+                "name": "GitHub Project",
+                "url": "https://github.com/VictoriaMetrics/victorialogs-datasource"
+            }
+        ],
+        "screenshots": [
+            {
+                "name": "Connection properties",
+                "path": "img/datasource.png"
+            },
+            {
+                "name": "Dashboard",
+                "path": "img/dashboard.png"
+            },
+            {
+                "name": "Explore",
+                "path": "img/explore.png"
+            },
+            {
+                "name": "Alerting",
+                "path": "img/alerting.png"
+            }
+        ],
+        "version": "0.16.3",
+        "updated": "2025-04-11"
+    },
+    "dependencies": {
+        "grafanaDependency": ">=10.0.3",
+        "plugins": []
+    },
+    "buildMode": "production"
+}

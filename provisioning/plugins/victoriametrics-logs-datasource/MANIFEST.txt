@@ -1,0 +1,51 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "commercial",
+  "signedByOrg": "victoriametrics",
+  "signedByOrgName": "VictoriaMetrics",
+  "plugin": "victoriametrics-logs-datasource",
+  "version": "0.16.3",
+  "time": 1744363853857,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "LICENSE": "4c3d102580bb7fc8f1beaee70a439aaacd14fa0a04598df8c246ba09906808e0",
+    "victoriametrics_logs_backend_plugin_darwin_arm64": "85e895dc27221cd3eb5fee123f1b4798ff5e9ad0c219b410349f7e20706945e8",
+    "victoriametrics_logs_backend_plugin_linux_arm64": "0f116e87831a88a305a7c9e6bbb3d1d97138bbd6873230952597a23e11ab71f4",
+    "CHANGELOG.md": "c153440d4efeccb696ff58b14587d8e80d52f48e8f6a3f0582370233a980179d",
+    "img/dashboard.png": "ac385d46196c8fa66acfe6fba229eaa15b5783ae5eecf03018376c54f6b037e2",
+    "img/panel_table.png": "d627a018c5d4aff947a69d97cc79e8e2dc93bbe3d703fec22abe82463dc3611b",
+    "img/alerting.png": "a157cc2f772d27a12d91315ffadac9a654aa85ab593aac5108f64e4cfb7cab85",
+    "img/logo.svg": "7f23f0c7190969944b31ed09a5f70534f025e3d6dbf4d99fb061b73bf287a4c3",
+    "img/panel_table_transformation.png": "9862def4b261c987f34bf696fa3a1e4d803f36477eb268a8a9256c6fbdec84f0",
+    "img/panel_stat.png": "4b41a557bf518d110b7135411ba0e3ddeca8ed761a5f26b497e620c52974c12b",
+    "img/panel_logs.png": "a98b8d92e5bebc7da029a5eef41607b9c59f3f3ad9e814f524d4cedb4bad6cd8",
+    "img/explore.png": "7f882322027212e3fe51ea950a3f727ebfaa16f52818c6921819948f96c473f3",
+    "img/datasource.png": "d3f39adc531bf4e008fc687b247a464550ab1f4e2b1f8a9c9e92f72963ea153c",
+    "img/panel_time_series.png": "d95348f852079c8a8f60a11d61e2268e23b0da53e88dfeefd867891e489cc46c",
+    "victoriametrics_logs_backend_plugin_darwin_amd64": "4e25a0b6d1ad40c4defc2261fc85e635d52f095d159760249a02b4472d51eb4d",
+    "README.md": "cc856aa10f8518e6a9fb1b700bf78434ef2c01c6307401ef6d7694c40efade34",
+    "module.js.map": "355f0a1c401f9d3bbdae4c74c9ae9341cddd5a655d576050011c1bd52da448a0",
+    "victoriametrics_logs_backend_plugin_linux_amd64": "58bd80f99b0b4b7edb5cd6ad41cc4afbe88135cdd9df31a060698767b3eb19f3",
+    "victoriametrics_logs_backend_plugin_linux_arm": "1e6bd92da1567960de88f9346db854eea2f22895767730c8b01b268e0339a1f6",
+    "plugin.json": "99f9299682152c7ef663f1e8ef7ae46dd4ab73c5c372658b90d53d7c856eb074",
+    "module.js": "51c3091955ea3619e327e52f826c1adf43a1ba7c5d7288496719c9fa81075c07",
+    "victoriametrics_logs_backend_plugin_linux_s390x": "fa0a8e9742eff32cc0230bf7637a23b58d092859a022c5a83353096211ab444f",
+    "go_plugin_build_manifest": "fb31dbd7c0fbfbdd4df553300df15d827151f6b8bc3f904c2cb8c03fd63ff6dc",
+    "victoriametrics_logs_backend_plugin_windows_amd64.exe": "e979248818fe6cf5c2121e690dd1f0e83d5c56c81226ae91e42321f7cbb2856b"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.11
+Comment: https://openpgpjs.org
+
+wrkEARMKAAYFAmf44U4AIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm583CAgkA6NFpMFlP5rSuWQA+qFRX4iELrtl/grm7Af+Zwfz4p01QbmaE
+/27Iw+PkZf1SjL6y5o1h8kFbbdYSaNCKgZrc8cMCCQDtHmMtoXA35vhe4uou
+vfHLWe6tw6a2peyhATm3KD2iZXl77vuPIcFMA0CO2bU9sBj2TTj/ZThjmCRQ
+NkzFtTjvwg==
+=UdCK
+-----END PGP SIGNATURE-----
