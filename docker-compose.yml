@@ -1,7 +1,9 @@
+version: '3.8'
+
 services:
   # Grafana instance configured with VictoriaLogs as datasource
   grafana:
-    image: adysis/victoriametricslogs:v1.0.2  # Use your custom image with version v1.0.1
+    image: adysis/victoriametricslogs:v1.0.3  # Use your custom image with version v1.0.1
     depends_on:
       - "victoriametrics"
       - "victorialogs"
