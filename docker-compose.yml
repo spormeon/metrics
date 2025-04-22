@@ -45,6 +45,7 @@ services:
       interval: 5s
       retries: 3
     user: root
+    restart: always
     networks:
       - metrics_network
 
