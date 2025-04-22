@@ -46,6 +46,11 @@ services:
       retries: 3
     user: root
     restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "1.0"
     networks:
       - metrics_network
 
