@@ -110,7 +110,7 @@ services:
       - "--notifier.url=http://alertmanager:9093/"
       - "--rule=/etc/alerts/*.yml"
       # display source of alerts in grafana
-      - "--external.url=http://0.0.0.0:3000" #grafana outside container
+      - "--external.url=http://:3000" #grafana outside container
     restart: always
     networks:
       - metrics_network
