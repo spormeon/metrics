@@ -40,6 +40,10 @@ services:
       - "victorialogs"
     ports:
       - "8686:8686"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8686/health"]  # Adjust health check if needed
+      interval: 5s
+      retries: 3
     user: root
     networks:
       - metrics_network
